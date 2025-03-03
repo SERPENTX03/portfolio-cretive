@@ -1,10 +1,10 @@
-import { Home } from "lucide-react";
+import { Home, Palette, Phone, User } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import ResponsiveComponent from "../ResponsiveComponent";
-import { FaDiscord, FaDonate, FaInstagram, FaUser } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
 
 type NavButtonPorps = {
   x: string;
@@ -21,11 +21,11 @@ const getIcon = (icon: React.ReactNode) => {
     case "home":
       return <Home className="w-full h-auto" strokeWidth={1.5} />;
     case "money":
-      return <FaDonate className="w-full h-auto" strokeWidth={1.5} />;
+      return <User className="w-full h-auto" strokeWidth={1.5} />;
     case "Intragram":
-      return <FaInstagram className="w-full h-auto" strokeWidth={1.5} />;
+      return <Palette className="w-full h-auto" strokeWidth={1.5} />;
     case "Canva":
-      return <FaUser className="w-full h-auto" strokeWidth={1.5} />;
+      return <Phone className="w-full h-auto" strokeWidth={1.5} />;
     case "discord":
       return <FaDiscord className="w-full h-auto" strokeWidth={1.5} />;
 

@@ -91,11 +91,13 @@ export const projectsData = [
   
   export const BtnList = [
     { label: "Home", link: "/", icon: "home", newTab: false },
-
+    { label: "About", link: "/topgift", icon: "about", newTab: false },
+    { label: "MyHamter", link: "/show", icon: "projects", newTab: false },
+    { label: "Contact", link: "/contact", icon: "contact", newTab: false },
     {
       label: "Donate Me",
       link: "https://ezdn.app/h3artxmeo",
-      icon: "money",
+      icon: "github",
       newTab: true,
     },
     {
@@ -105,18 +107,17 @@ export const projectsData = [
       newTab: true,
     },
     {
-      label: "Discord",
-      link: "https://discord.com/invite/t6TH6C6dVZ",
-      icon: "discord",
+      label: "X",
+      link: "https://www.x.com/code_bucks",
+      icon: "twitter",
       newTab: true,
     },
     {
-      label: "Top Donate",
-      link: "https://www.canva.com/design/DAGglLHjYC8/6m4sFSA5touP-Ie9XBf9tA/view?utm_content=DAGglLHjYC8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8388e9a969",
-      icon: "Canva",
+      label: "Resume",
+      link: "/resume.pdf",
+      icon: "resume",
       newTab: true,
     },
-
   ];
   
   

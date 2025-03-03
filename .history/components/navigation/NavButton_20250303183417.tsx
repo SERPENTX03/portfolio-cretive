@@ -1,10 +1,18 @@
-import { Home } from "lucide-react";
+import {
+  Github,
+  Home,
+  Linkedin,
+  NotebookText,
+  Palette,
+  Phone,
+  Twitter,
+  User,
+} from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import ResponsiveComponent from "../ResponsiveComponent";
-import { FaDiscord, FaDonate, FaInstagram, FaUser } from "react-icons/fa";
 
 type NavButtonPorps = {
   x: string;
@@ -20,14 +28,20 @@ const getIcon = (icon: React.ReactNode) => {
   switch (icon) {
     case "home":
       return <Home className="w-full h-auto" strokeWidth={1.5} />;
-    case "money":
-      return <FaDonate className="w-full h-auto" strokeWidth={1.5} />;
-    case "Intragram":
-      return <FaInstagram className="w-full h-auto" strokeWidth={1.5} />;
-    case "Canva":
-      return <FaUser className="w-full h-auto" strokeWidth={1.5} />;
-    case "discord":
-      return <FaDiscord className="w-full h-auto" strokeWidth={1.5} />;
+    case "about":
+      return <User className="w-full h-auto" strokeWidth={1.5} />;
+    case "projects":
+      return <Palette className="w-full h-auto" strokeWidth={1.5} />;
+    case "contact":
+      return <Phone className="w-full h-auto" strokeWidth={1.5} />;
+    case "github":
+      return <Github className="w-full h-auto" strokeWidth={1.5} />;
+    case "linkedin":
+      return <Linkedin className="w-full h-auto" strokeWidth={1.5} />;
+    case "twitter":
+      return <Twitter className="w-full h-auto" strokeWidth={1.5} />;
+    case "resume":
+      return <NotebookText className="w-full h-auto" strokeWidth={1.5} />;
 
     default:
       return <Home className="w-full h-auto" strokeWidth={1.5} />;
@@ -41,14 +55,7 @@ const item = {
 
 const NavLink = motion(Link);
 
-const NavButton = ({
-  x,
-  y,
-  label,
-  link,
-  icon,
-  newTab,
-  labelDirection = "right",
+const NavButton = ({ x, y, label, link, icon, newTab ,  labelDirection = "right"
 }: NavButtonPorps) => {
   return (
     <ResponsiveComponent>

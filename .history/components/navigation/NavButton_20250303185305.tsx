@@ -1,4 +1,4 @@
-import { Home } from "lucide-react";
+import { Home, User } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import clsx from "clsx";
