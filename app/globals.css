@@ -1,24 +1,66 @@
 @import "tailwindcss";
 
+/* กำหนดธีมด้วย @theme */
 @theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* ฟอนต์ */
+  --font-sans: "Inter", sans-serif;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* สีหลัก */
+  --color-background: rgb(27 27 27);
+  --color-foreground: rgb(225 225 225);
+  --color-muted: rgb(115 115 115);
+  --color-accent: rgb(254 254 91);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+  /* ความเร็วแอนิเมชัน */
+  --animate-spin-slow: spin 40s linear infinite;
+  --animate-spin-slow-reverse: spin-reverse 40s linear infinite;
+
+  /* Breakpoints */
+  --screen-xs: 480px;
+
+  /* เงา */
+  --shadow-glass-inset: inset 0 17px 5px -9px rgba(254, 254, 91, 0.05);
+  --shadow-glass-sm: 5px 5px 20px 0px rgba(254, 254, 91, 0.3);
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+
+/* แอนิเมชัน */
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@utility custom-bg {
+  @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-inset hover:shadow-glass-sm;
+}
+
+@utility paused {
+  animation-play-state: paused;
+}
+
+@utility firefly-bg {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(253, 255, 80, 0.5) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
 }
