@@ -33,9 +33,7 @@ const getIcon = (icon: React.ReactNode) => {
     case "top":
       return <BiDonateHeart className="w-full h-auto" strokeWidth={1.5} />;
     case "about":
-      return (
-        <FcAbout className="w-full h-auto" color="white" strokeWidth={1.5} />
-      );
+      return <FcAbout className="w-full h-auto text-white" strokeWidth={1.5} />;
     case "activity":
       return <MdLocalActivity className="w-full h-auto" strokeWidth={1.5} />;
     case "showson":

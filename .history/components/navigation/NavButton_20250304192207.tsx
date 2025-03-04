@@ -22,6 +22,8 @@ type NavButtonPorps = {
 
 const getIcon = (icon: React.ReactNode) => {
   switch (icon) {
+    case "home":
+      return <Home className="w-full h-auto" strokeWidth={1.5} />;
     case "money":
       return <FaDonate className="w-full h-auto" strokeWidth={1.5} />;
     case "Intragram":
@@ -33,9 +35,7 @@ const getIcon = (icon: React.ReactNode) => {
     case "top":
       return <BiDonateHeart className="w-full h-auto" strokeWidth={1.5} />;
     case "about":
-      return (
-        <FcAbout className="w-full h-auto" color="white" strokeWidth={1.5} />
-      );
+      return <FcAbout className="w-full h-auto" strokeWidth={1.5} />;
     case "activity":
       return <MdLocalActivity className="w-full h-auto" strokeWidth={1.5} />;
     case "showson":

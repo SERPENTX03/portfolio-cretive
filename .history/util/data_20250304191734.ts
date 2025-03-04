@@ -90,7 +90,7 @@ export const projectsData = [
   ];
   
   export const BtnList = [
-    // { label: "Home", link: "/", icon: "home", newTab: false },
+    { label: "Home", link: "/", icon: "home", newTab: false },
 
     {
       label: "โดเนท",
